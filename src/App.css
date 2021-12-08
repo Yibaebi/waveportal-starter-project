@@ -14,21 +14,33 @@
 
 .header {
   text-align: center;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 600;
+  font-family: Spoof;
+  color: var(--wvp-color-light-slate);
 }
 
 .bio {
   text-align: center;
-  color: gray;
-  margin-top: 16px;
+  margin-top: 20px;
+  font-size: 18px;
 }
 
 .waveButton {
+  font-weight: 550;
+  font-size: 16px;
   cursor: pointer;
-  margin-top: 16px;
+  margin-top: 20px;
   padding: 8px;
-  border: 0;
+  border: 2px solid;
+  border-color: var(--wvp-color-green);
+  background-color: transparent;
   border-radius: 5px;
-  
+  color: var(--wvp-color-white);
+  padding: 10px 16px;
+  transition: all 0.4s ease-in-out;
+}
+
+.waveButton:hover {
+  background-color: rgba(100, 255, 218, 0.1);
 }

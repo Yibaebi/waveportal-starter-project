@@ -1,5 +1,6 @@
 import * as React from 'react'
 import './App.css'
+
 export default function App() {
   const wave = () => {}
 
@@ -10,10 +11,10 @@ export default function App() {
           👋 Hey there!
         </span>
 
-        <div className="bio">
-          I am farza and I worked on self-driving cars so that's pretty cool right? Connect your Ethereum wallet and
-          wave at me!
-        </div>
+        <p className="bio">
+          I am Elliot and I love beating Magnus Carlsen at chess, that's pretty cool right? Connect your Ethereum wallet
+          and wave at me!
+        </p>
 
         <button className="waveButton" onClick={wave}>
           Wave at Me

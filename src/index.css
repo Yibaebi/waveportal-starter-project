@@ -1,13 +1,84 @@
+/* Spoof Font styles */
+@font-face {
+  font-family: 'Spoof';
+  src: url('./assets/fonts/spoof/Spoof-Regular.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spoof';
+  src: url('./assets/fonts/spoof/Spoof-Medium.woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spoof';
+  src: url('./assets/fonts/spoof/Spoof-Light.woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spoof';
+  src: url('./assets/fonts/spoof/Spoof-Bold.woff');
+
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spoof';
+  src: url('./assets/fonts/spoof/Spoof-Thin.woff');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Spoof';
+  src: url('./assets/fonts/spoof/Spoof-Black.woff');
+  font-weight: 900;
+  font-style: normal;
+}
+
+:root {
+  --wvp-color-velvet: #6d2e5d;
+  --wvp-color-melon: #f0386a;
+  --wvp-color-white: #fff;
+  --wvp-color-navy: #0a192f;
+  --wvp-color-green: #64ffda;
+  --wvp-color-light-slate: #a8b2d1;
+  --wvp-color-slate: #8892b0;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: DM Sans;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Spoof';
+  color: var(--wvp-color-light-slate);
+}
+
+p {
+  color: var(--wvp-color-slate);
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--wvp-color-navy);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
