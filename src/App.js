@@ -8,7 +8,7 @@ export default function App() {
     <div className="mainContainer">
       <div className="dataContainer">
         <span className="header" aria-label="Greeting" role="img">
-          👋 Hey there!
+          😎 Hey there!
         </span>
 
         <p className="bio">

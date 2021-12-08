@@ -35,8 +35,8 @@
   border: 2px solid;
   border-color: var(--wvp-color-green);
   background-color: transparent;
+  color: var(--wvp-color-green);
   border-radius: 5px;
-  color: var(--wvp-color-white);
   padding: 10px 16px;
   transition: all 0.4s ease-in-out;
 }
