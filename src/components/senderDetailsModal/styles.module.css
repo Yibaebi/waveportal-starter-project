@@ -178,6 +178,15 @@ p.modalContentDate {
   border-bottom: 1px solid rgba(100, 255, 218, 0.1);
 }
 
+@media screen and (max-width: 475px) {
+  .modalContent {
+    margin: 20px;
+  }
+  .waverAddress h2 {
+    font-size: 12px;
+  }
+}
+
 .messageText span {
   display: inline-flex;
   align-items: flex-start;

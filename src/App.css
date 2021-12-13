@@ -9,15 +9,18 @@
 }
 
 .dataContainer {
+  padding: 50px;
+  padding-left: 0px;
+  overflow-y: auto;
+  width: 60%;
   height: 100%;
+  min-width: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 600px;
   margin: 0 auto;
   margin-bottom: 100px;
   margin-right: 50px;
-  padding-right: 50px;
   border-right: 1px solid rgba(100, 255, 218, 0.1);
 }
 
@@ -27,12 +30,6 @@
   font-weight: 600;
   font-family: Spoof;
   color: var(--wvp-color-light-slate);
-}
-
-@media screen and (max-width: 475px) {
-  .header {
-    font-size: 25px;
-  }
 }
 
 .bio {
@@ -179,7 +176,6 @@ h1.wavesCounter span {
   color: var(--wvp-color-light-slate);
   border: 1px solid #64ffdb79;
   width: 100%;
-  max-width: 600px;
   padding-bottom: 10px;
   padding-top: 10px;
   margin-bottom: 20px;
@@ -239,4 +235,74 @@ h1.wavesCounter span {
 }
 .emptyWavList path {
   stroke: var(--wvp-color-light-slate);
+}
+
+@media screen and (max-width: 1110px) {
+  .dataWrapper {
+    padding-left: 50px;
+  }
+}
+@media screen and (max-width: 1010px) {
+  .dataWrapper {
+    padding: 50px;
+    flex-direction: column;
+    height: unset;
+    width: 100%;
+  }
+  .dataContainer {
+    width: 80%;
+    height: fit-content;
+    overflow-y: unset;
+    padding: 0px;
+    margin: 0px auto;
+    border: none;
+    margin-bottom: 100px;
+  }
+
+  .wavesSendersInfo {
+    padding: 0px;
+    height: unset;
+    max-height: unset;
+    overflow: unset;
+  }
+
+  .waverAddressList {
+    margin-bottom: 100px;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .dataWrapper {
+    padding: 0px;
+    padding-top: 40px;
+  }
+  .dataContainer {
+    width: 100%;
+    padding: 25px !important;
+    min-width: 100%;
+  }
+
+  h1.wavesCounter i {
+    margin-right: 0px;
+  }
+
+  .wavesAnalyticsInfo {
+    padding: 20px;
+  }
+
+  .wavesSendersContainer {
+    padding: 20px;
+  }
+
+  .waverAddress .fa-angle-right {
+    right: 0px;
+  }
+  .waverAddress:hover .fa-angle-right {
+    right: -2px;
+  }
+}
+@media screen and (max-width: 475px) {
+  .header {
+    font-size: 25px;
+  }
 }

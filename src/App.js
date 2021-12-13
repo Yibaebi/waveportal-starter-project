@@ -201,7 +201,7 @@ export default function App() {
               <i className="fas fa-user-alt"></i>
               <aside className="profileOverview">
                 <span>{waver.sender.slice(0, 6)}</span>
-                <span>{waver.message}</span>
+                <span>{waver.message.slice(0, 20)}...</span>
               </aside>
               <i className="fas fa-angle-right"></i>
             </section>
