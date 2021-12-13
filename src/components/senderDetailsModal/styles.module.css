@@ -1,0 +1,188 @@
+.mainContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalContent {
+  background-color: var(--wvp-color-navy);
+  border: 2px solid var(--wvp-color-light-slate);
+
+  position: relative;
+  border-radius: 10px;
+  padding-top: 52px;
+  padding-bottom: 70px;
+  transform: scale(0.1);
+  opacity: 0;
+  display: none;
+  transform: scale(0);
+}
+
+.modalContent.open {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modalContent button {
+  margin: 0 auto;
+  margin-top: 32px;
+  max-width: 372px;
+}
+
+.closeIcon {
+  position: absolute;
+  top: 16px;
+  right: 40px;
+  cursor: pointer;
+}
+
+.modalContent > span > svg path {
+  fill: var(--wcp-color-velvet);
+}
+
+.modalContent.agencyModal > span:last-of-type > svg,
+.modalContent.customerModal > span:last-of-type > svg {
+  width: 72px;
+  height: 72px;
+}
+
+/* Modal content messages */
+.modalContentMessages.newPassword h3 {
+  margin-top: 24px;
+}
+.modalContentMessages h3 {
+  margin: 0 auto;
+  width: 50%;
+  font-size: 32px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  margin-top: 20px;
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+.modalContentMessages p {
+  margin: 0 auto;
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(9, 14, 17, 0.4);
+  width: 100%;
+  max-width: 350px;
+  text-align: center;
+}
+.messageIcon {
+  height: fit-content;
+}
+.messageIcon i {
+  font-size: 80px;
+  color: var(--wvp-color-light-slate);
+  margin-bottom: 30px;
+}
+
+/* 
+==========================================================
+SUBSCRIPTIONS MODAL
+==========================================================
+*/
+
+.modalContent.sendersModal {
+  padding: 56px;
+  padding-top: 42px;
+  padding-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  animation: subscriptionsModalAnim 0.5s;
+  animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  animation-fill-mode: both;
+  transform-origin: bottom;
+}
+
+.sendersModalClose {
+  display: none;
+}
+
+@keyframes subscriptionsModalAnim {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.modalContent.sendersModal > h3 {
+  font-size: 28px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.modalContent.sendersModal .closeIcon {
+  color: rgba(243, 109, 109, 0.808);
+  top: 21px;
+  right: 20px;
+}
+
+p.modalContentDate {
+  color: var(--wvp-color-green);
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.messageText {
+  padding: 0px 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.messageText h2 {
+  font-size: 26px;
+  font-family: DM Sans;
+  text-align: center;
+  line-height: 100%;
+}
+
+.waverAddress h2 {
+  color: var(--wvp-color-green);
+  font-size: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+}
+
+.messageText span {
+  display: inline-flex;
+  align-items: flex-start;
+}
+
+.messageText i {
+  font-size: 10px;
+}

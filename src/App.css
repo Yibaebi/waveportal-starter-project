@@ -1,15 +1,24 @@
-.mainContainer {
+.dataWrapper {
+  padding: 0px;
+  padding-left: 80px;
   display: flex;
-  justify-content: center;
-  width: 100%;
-  margin-top: 64px;
+  height: 100vh;
+  width: 100vw;
+  max-width: 1560px;
+  max-height: 1000px;
 }
 
 .dataContainer {
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  margin-right: 50px;
+  padding-right: 50px;
+  border-right: 1px solid rgba(100, 255, 218, 0.1);
 }
 
 .header {
@@ -20,13 +29,25 @@
   color: var(--wvp-color-light-slate);
 }
 
+@media screen and (max-width: 475px) {
+  .header {
+    font-size: 25px;
+  }
+}
+
 .bio {
   text-align: center;
   margin-top: 20px;
   font-size: 18px;
+  padding: 0px 10px;
 }
 
-.waveButton {
+.waveButton,
+.waveButton-inverted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
   font-weight: 550;
   font-size: 16px;
   cursor: pointer;
@@ -40,7 +61,182 @@
   padding: 10px 16px;
   transition: all 0.4s ease-in-out;
 }
+.waveButton-inverted {
+  border-color: var(--wvp-color-green);
+  background-color: var(--wvp-color-green);
+  color: var(--wvp-color-navy);
+}
 
-.waveButton:hover {
+.waveButton:disabled {
+  cursor: not-allowed;
+}
+
+.waveButton:hover:not(:disabled) {
   background-color: rgba(100, 255, 218, 0.1);
+}
+
+.onBoardingScreen {
+  height: 100%;
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.onBoardingScreen .header {
+  margin-bottom: 20px;
+}
+
+.onboardingContainer {
+  width: 100%;
+  height: 100%;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.wavesLoadingContainer {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--wvp-color-light-slate);
+  font-size: 25px;
+}
+
+/* Wave counter */
+.wavesAnalyticsInfo {
+  margin-bottom: 30px;
+}
+h1.wavesCounter {
+  font-family: DM Sans;
+  font-size: 15px;
+  font-weight: 500;
+  opacity: 0.9;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: space-between;
+}
+
+h1.wavesCounter i {
+  margin-right: 20px;
+  width: 30px;
+}
+
+h1.wavesCounter span {
+  font-size: 16px;
+  margin-top: 10px;
+  color: var(--wvp-color-green);
+}
+
+/* wavesSendersInfo */
+.wavesSendersInfo {
+  overflow: auto;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 0.5fr 1fr;
+  width: 100%;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  padding-right: 50px;
+}
+
+.wavesSendersInfo h2 {
+  font-size: 17px;
+  text-transform: uppercase;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(100, 255, 218, 0.1);
+  padding-bottom: 10px;
+}
+
+.wavesSendersInfo h2 span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--wvp-color-green);
+  color: var(--wvp-color-navy);
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  margin-left: 10px;
+}
+
+.waverAddressList {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: #8892b01e;
+  border: 3px solid rgba(100, 255, 218, 0.05);
+  max-height: 456px;
+  overflow-y: auto;
+}
+
+.waverAddress {
+  color: var(--wvp-color-light-slate);
+  border: 1px solid #64ffdb79;
+  width: 100%;
+  max-width: 600px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.waverAddress .fa-angle-right {
+  position: absolute;
+  right: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.waverAddress:hover {
+  background-color: rgba(100, 255, 218, 0.05);
+}
+.waverAddress:hover .fa-angle-right {
+  right: 10px;
+}
+
+.profileOverview {
+  display: flex;
+  flex-direction: column;
+}
+
+.waverAddress i {
+  display: block;
+  margin-right: 20px;
+  font-size: 23px;
+}
+
+/* Wave message input */
+.waveMessageInput {
+  font-size: 16px;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid var(--wvp-color-light-slate);
+  border-radius: 5px;
+  color: var(--wvp-color-light-slate);
+  outline: none;
+  max-height: 200px;
+}
+
+.waveMessageInput::placeholder {
+  color: var(--wvp-color-light-slate);
+  opacity: 0.5;
+}
+
+/* emptyWavList */
+.emptyWavList {
+  width: 70px;
+}
+.emptyWavList path {
+  stroke: var(--wvp-color-light-slate);
 }
